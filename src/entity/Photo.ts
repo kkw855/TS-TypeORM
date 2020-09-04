@@ -11,10 +11,10 @@ import { PhotoMetadata } from './PhotoMetadata';
 import { Author } from './Author';
 import { Album } from './Album';
 
-@Entity()
+@Entity('photo')
 export class Photo {
-  @PrimaryGeneratedColumn()
-  id!: number;
+  @PrimaryGeneratedColumn('uuid')
+  id!: string;
 
   @Column({
     length: 100,

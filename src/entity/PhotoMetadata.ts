@@ -28,7 +28,7 @@ export class PhotoMetadata {
   @Column()
   comment!: string;
 
-  @OneToOne((type) => Photo, (photo) => photo.metadata)
+  @OneToOne((type) => Photo, (photo) => photo.metadata, { onDelete: 'CASCADE' })
   @JoinColumn()
   photo!: Photo;
 }
